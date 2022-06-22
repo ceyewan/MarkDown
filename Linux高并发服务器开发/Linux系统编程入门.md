@@ -516,8 +516,7 @@ cmd：表示对文件描述符进行如何操作
 		int flag = fcntl(fd, F_GETFL);
 	- F_SETFL 设置文件描述符文件状态 flag
 		- 必选项：O_PDONLY O_WRONLY O_RDWR
-		- 可选项：O_APPEND追加数据
-						NONBLOCK 设置成非阻塞*/
+		- 可选项：O_APPEND追加数据；NONBLOCK 设置成非阻塞*/
 int fd = open("a.txt", O_RDWR);
 int flag = fcntl(fd, F_GETFL);
 fcntl(fd, G_SETFL, flag | O_APPEND); // 设置成追加写入
